@@ -1,0 +1,135 @@
+:root {
+    --darkest: #0d1b2a;
+    --dark: #1b263b;
+    --main: #415a77;
+    --light: #778da9;
+    --lightest: #e0e1dd;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto Mono', monospace;
+    background-color: var(--darkest);
+}
+
+.container {
+    margin: auto;
+    width: 80%;
+    background-color: var(--dark);
+    display: flex;
+    justify-content: center;
+    padding: 5rem 0;
+    min-height: 500px;
+}
+
+h1 {
+    text-align: center;
+    color: var(--light);
+}
+
+form {
+    margin: auto;
+    width: 550px;
+    margin-top: 50px;
+    padding: 5px 20px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+form button {
+    width: 70px;
+    height: 35px;
+    font-size: 1.5rem;
+    background-color: var(--lightest);
+    border: none;
+    border-radius: 5px;
+}
+
+form button:hover {
+    cursor: pointer;
+}
+
+form input {
+    width: 250px;
+    height: 30px;
+    font-size: 1.25rem;
+}
+
+form input::placeholder {
+    color: var(--darkest);
+    font-size: 1rem;
+    padding: 0 1rem;
+}
+
+form label {
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    color: var(--light);
+}
+
+.task {
+    border-radius: 5px;
+}
+
+.taskContent {
+    margin: 0 4rem;
+    width: 500px;
+    font-size: 1.5rem;
+    background-color: var(--lightest);
+    border-radius: 2rem;
+    margin-top: 2rem;
+    padding: 0.5rem 3rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.delete {
+    text-transform: uppercase;
+    color: red;
+    font-weight: 900;
+}
+
+.delete:hover {
+    cursor: pointer;
+    opacity: 0.5;
+    transition: 250ms;
+}
+
+@media all and (max-width: 750px ) {
+
+    body {
+        background-color: var(--dark);
+    }
+    form {
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        height: 250px;
+    }
+
+    .container {
+        margin: auto;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        background-color: var(--dark);
+    }
+
+    .taskContent {
+        font-size: 1rem;
+        width: 200px;
+        margin: auto;
+        border-radius: 2rem;
+        margin-top: 1.5rem;
+        padding: 0.5rem 2rem;
+        display: flex;
+        justify-content: space-between;
+    }
+
+}
